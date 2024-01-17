@@ -3,5 +3,5 @@ services:
   apple:
     image: apple
     build:
-      context: /dockerfiles
-      dockerfile: apple.dockerfile
+      context: .
+      dockerfile: Dockerfile
