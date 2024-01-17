@@ -6,8 +6,8 @@ RUN apt update && \
     apt clean && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt requirements.txt
-COPY test.py test.py
+COPY apple.py apple.py
 WORKDIR /
 RUN pip install -r requirements.txt --no-cache-dir
 
-ENTRYPOINT ["python", "-u", "test.py"]
+ENTRYPOINT ["python", "-u", "apple.py"]

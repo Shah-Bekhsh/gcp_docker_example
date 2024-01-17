@@ -6,8 +6,8 @@ RUN apt update && \
     apt clean && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt requirements.txt
-COPY train.py train.py
+COPY orange.py orange.py
 WORKDIR /
 RUN pip install -r requirements.txt --no-cache-dir
 
-ENTRYPOINT ["python", "-u", "train.py"]
+ENTRYPOINT ["python", "-u", "orange.py"]
