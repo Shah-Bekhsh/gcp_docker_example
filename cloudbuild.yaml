@@ -1,5 +1,13 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/sunlit-apricot-411406/another_test', '.']
+  entrypoint: ["python", "-u", "apple.py"]
+  args: ['build', '-t', 'gcr.io/sunlit-apricot-411406/apple', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/sunlit-apricot-411406/another_test']
+  entrypoint: ["python", "-u", "apple.py"]
+  args: ['push', 'gcr.io/sunlit-apricot-411406/apple']
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: ["python", "-u", "orange.py"]
+  args: ['build', '-t', 'gcr.io/sunlit-apricot-411406/orange', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: ["python", "-u", "orange.py"]
+  args: ['push', 'gcr.io/sunlit-apricot-411406/orange']
