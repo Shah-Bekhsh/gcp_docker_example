@@ -7,6 +7,7 @@ RUN apt update && \
 
 COPY requirements.txt requirements.txt
 COPY apple.py apple.py
+
 WORKDIR /
 RUN pip install -r requirements.txt --no-cache-dir
 
