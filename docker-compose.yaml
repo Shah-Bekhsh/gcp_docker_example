@@ -1,7 +1,0 @@
-version: "3"
-services:
-  apple:
-    image: apple:latest
-    build:
-      context: .
-      dockerfile: dockerfiles/apple.dockerfile
