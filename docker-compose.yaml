@@ -1,12 +1,7 @@
 version: "3"
 services:
-  trainer:
+  apple:
     image: apple:latest
     build:
       context: .
       dockerfile: dockerfiles/apple.dockerfile
-  predict:
-    image: orange:latest
-    build:
-      context: .
-      dockerfile: dockerfiles/orange.dockerfile
