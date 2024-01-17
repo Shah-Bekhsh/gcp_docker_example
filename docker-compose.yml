@@ -1,7 +1,10 @@
 version: '3'
 services:
   apple:
-    image: apple
     build:
       context: .
       dockerfile: Dockerfile.apple
+  orange:
+    build:
+      context: .
+      dockerfile: Dockerfile.orange
